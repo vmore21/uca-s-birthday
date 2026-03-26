@@ -149,5 +149,13 @@ for (let i = 0; i < 50; i++) {
 }
 </script>
 
-</body>
+</body>body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('ds.jpg') center/cover no-repeat;
+    filter: blur(12px) brightness(0.7);
+    z-index: -2;
+}
 </html>
