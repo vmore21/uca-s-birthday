@@ -95,7 +95,15 @@ body {
 </style>
 </head>
 
-<body>
+<body><audio id="music" loop>
+  <source src="always.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.body.addEventListener('click', function() {
+    document.getElementById('music').play();
+});
+</script>
 
 <div class="card">
     <div class="top">
