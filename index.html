@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Uca</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background: linear-gradient(-45deg, #dfe9f3, #fcefee, #e4ecff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* kartu */
+.card {
+    width: 340px;
+    height: 500px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    position: relative;
+    animation: fade 1.5s ease;
+}
+
+/* bagian atas */
+.top {
+    height: 40%;
+    background: linear-gradient(135deg, #cfd9ff, #ffd6e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* isi */
+.content {
+    padding: 20px;
+    height: 60%;
+    overflow-y: auto;
+}
+
+.content h2 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* animasi */
+@keyframes fade {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* bintang */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #aaa;
+    border-radius: 50%;
+    animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="top">
+        <h1>Happy Birthday 🤍</h1>
+    </div>
+
+    <div class="content">
+        <h2>Selamat ulang tahun, Uca.</h2>
+
+        <p>
+            hari ini nambah lagi usia kamu.  
+            ga perlu kata-kata yang terlalu ramai, yang penting kamu tahu… hari ini tetap berarti.
+            <br><br>
+            semoga semua yang kamu jalanin ke depan bisa lebih ringan.  
+            dan semua yang lagi kamu pikirin, pelan-pelan nemu jawabannya.
+            <br><br>
+            Aku cuma mau bilang, sejauh apapun waktu jalan…  
+            ada beberapa hal yang ga benar-benar hilang.
+            <br><br>
+            Termasuk cara aku lihat kamu, yang masih sama seperti dulu.  
+            Ga harus selalu diungkapin, tapi juga ga pernah benar-benar berubah.
+            <br><br>
+            Kamu ga harus buru-buru ngerespon apa pun.  
+            Cukup jalanin hari kamu seperti biasa.
+            <br><br>
+            Tapi kalau suatu saat kamu capek, atau butuh tempat balik…  
+            kamu tau harus ke mana.
+            <br><br>
+            Semoga hari ini cukup untuk bikin kamu senyum, walaupun sebentar.
+        </p>
+    </div>
+</div>
+
+<script>
+// bintang
+for (let i = 0; i < 50; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+    document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
