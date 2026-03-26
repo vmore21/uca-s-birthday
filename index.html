@@ -6,18 +6,40 @@
 <title>Untuk Uca</title>
 
 <style>
+body <html>
+<head>
+
+<style>
+
+/* NAH DI SINI TEMPATNYA 👇 */
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+}
 
-    background: linear-gradient(-45deg, #dfe9f3, #fcefee, #e4ecff, #ffffff);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('ds.jpg') center/cover no-repeat;
+    filter: blur(12px) brightness(0.7);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(0,0,0,0.3));
+    z-index: -1;
+}
+
+
+</style>
+
+</head>;
 }
 
 @keyframes gradientMove {
@@ -149,14 +171,6 @@ for (let i = 0; i < 50; i++) {
 }
 </script>
 
-</body>body::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('ds.jpg') center/cover no-repeat;
-    filter: blur(12px) brightness(0.7);
-    z-index: -2;
-}
+</body>
     
 </html>
