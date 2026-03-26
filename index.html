@@ -6,17 +6,17 @@
 <title>Untuk Uca</title>
 
 <style>
-body <html>
-<head>
-
-<style>
-
-/* NAH DI SINI TEMPATNYA 👇 */
-
 body {
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+/* BACKGROUND FOTO BLUR */
 body::before {
     content: "";
     position: absolute;
@@ -27,6 +27,7 @@ body::before {
     z-index: -2;
 }
 
+/* OVERLAY */
 body::after {
     content: "";
     position: absolute;
@@ -36,31 +37,19 @@ body::after {
     z-index: -1;
 }
 
-
-</style>
-
-</head>;
-}
-
-@keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-/* kartu */
+/* KARTU */
 .card {
     width: 340px;
     height: 500px;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
-    position: relative;
     animation: fade 1.5s ease;
 }
 
-/* bagian atas */
+/* HEADER */
 .top {
     height: 40%;
     background: linear-gradient(135deg, #cfd9ff, #ffd6e0);
@@ -75,7 +64,7 @@ body::after {
     font-size: 22px;
 }
 
-/* isi */
+/* ISI */
 .content {
     padding: 20px;
     height: 60%;
@@ -86,6 +75,7 @@ body::after {
     margin-top: 0;
     font-size: 16px;
     font-weight: 600;
+    color: #111;
 }
 
 .content p {
@@ -94,13 +84,13 @@ body::after {
     color: #333;
 }
 
-/* animasi */
+/* ANIMASI */
 @keyframes fade {
-    from {opacity: 0; transform: translateY(20px);}
+    from {opacity: 0; transform: translateY(15px);}
     to {opacity: 1; transform: translateY(0);}
 }
 
-/* bintang */
+/* BINTANG */
 .star {
     position: absolute;
     width: 2px;
@@ -117,7 +107,8 @@ body::after {
 </style>
 </head>
 
-<body><audio id="music" loop>
+<body>
+    <audio id="music" loop>
   <source src="always.mp3" type="audio/mpeg">
 </audio>
 
@@ -136,11 +127,11 @@ document.body.addEventListener('click', function() {
         <h2>Selamat ulang tahun, Uca.</h2>
 
         <p>
-            hari ini nambah lagi usia kamu.  
-            ga perlu kata-kata yang terlalu ramai, yang penting kamu tahu… hari ini tetap berarti.
+            Hari ini nambah lagi usia kamu.  
+            Ga perlu kata-kata yang terlalu ramai, yang penting kamu tahu… hari ini tetap berarti.
             <br><br>
-            semoga semua yang kamu jalanin ke depan bisa lebih ringan.  
-            dan semua yang lagi kamu pikirin, pelan-pelan nemu jawabannya.
+            Semoga semua yang kamu jalanin ke depan bisa lebih ringan.  
+            Dan semua yang lagi kamu pikirin, pelan-pelan nemu jawabannya.
             <br><br>
             Aku cuma mau bilang, sejauh apapun waktu jalan…  
             ada beberapa hal yang ga benar-benar hilang.
@@ -160,8 +151,8 @@ document.body.addEventListener('click', function() {
 </div>
 
 <script>
-// bintang
-for (let i = 0; i < 50; i++) {
+// BINTANG RANDOM
+for (let i = 0; i < 60; i++) {
     let star = document.createElement("div");
     star.className = "star";
     star.style.top = Math.random() * 100 + "vh";
@@ -172,5 +163,4 @@ for (let i = 0; i < 50; i++) {
 </script>
 
 </body>
-    
 </html>
